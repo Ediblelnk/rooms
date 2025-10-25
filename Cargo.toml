@@ -3,5 +3,7 @@ name = "rooms"
 description = "Rust Operations On MatriceS."
 version = "0.1.0-alpha"
 edition = "2024"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/Ediblelnk/rooms"
 
 [dependencies]
