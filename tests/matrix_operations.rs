@@ -1,4 +1,4 @@
-use rooms::Matrix;
+use rooms::linear_algebra::Matrix;
 
 #[test]
 fn add() {

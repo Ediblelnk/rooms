@@ -1,2 +1,2 @@
 # rooms
-Rust Operations On Mathematical Objects
+Rust Operations On Mathematical Structures

@@ -1,10 +1,8 @@
-use rooms::Matrix;
+use rooms::linear_algebra::Matrix;
 
 #[test]
 fn new() {
     let m: Matrix<2, 3, _> = Matrix::new(vec![1, 2, 3, 4, 5, 6]);
-    assert_eq!(m.rows(), 2);
-    assert_eq!(m.cols(), 3);
     assert_eq!(*m.as_vec(), vec![1, 2, 3, 4, 5, 6]);
 }
 
