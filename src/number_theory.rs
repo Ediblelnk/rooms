@@ -14,6 +14,7 @@ pub fn lcm(a: isize, b: isize) -> isize {
     (a * b) / gcd(a, b)
 }
 
+#[derive(Debug, Clone, Copy)]
 pub struct Rational {
     numerator: isize,
     denominator: isize,
@@ -53,6 +54,12 @@ impl Rational {
 
     pub fn as_f64(&self) -> f64 {
         self.numerator as f64 / self.denominator as f64
+    }
+}
+
+impl Default for Rational {
+    fn default() -> Self {
+        Self::new(0, 1)
     }
 }
 
@@ -161,5 +168,11 @@ impl std::cmp::PartialOrd for Rational {
 impl std::cmp::Ord for Rational {
     fn cmp(&self, other: &Self) -> std::cmp::Ordering {
         (self.numerator * other.denominator).cmp(&(other.numerator * self.denominator))
+    }
+}
+
+impl From<isize> for Rational {
+    fn from(value: isize) -> Self {
+        Self::new(value, 1)
     }
 }
