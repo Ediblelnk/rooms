@@ -1,6 +1,8 @@
 pub mod rationals;
 pub use rationals::*;
 
+pub mod primes;
+
 pub fn gcd(a: isize, b: isize) -> isize {
     let mut temp;
     let mut a = a;
